@@ -1,15 +1,9 @@
-import Card from './Card'
-import { robots } from './robots'
+import RobotList from './RobotList'
 
 export default function Home() {
   return (
     <main>
-        {robots.map(robot => {
-          return (
-            <Card key={robot.id} id={robot.id} name={robot.name} email={robot.email} />
-          )
-        })
-      }
+        <RobotList />
     </main>
   )
 }
