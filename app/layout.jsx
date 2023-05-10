@@ -1,7 +1,6 @@
 import './globals.css';
 import RobotsContextProvider from './components/RobotsContextProvider';
 import { Poppins } from 'next/font/google';
-import Head from 'next/head';
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 

@@ -50,7 +50,7 @@ export default function RobotsContextProvider({ children }) {
             />
             <Scroll>
                 {children}
-            </Scroll>  
+            </Scroll>
         </RobotsContext.Provider>
     )
 }
