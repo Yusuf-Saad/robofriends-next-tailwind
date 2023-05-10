@@ -1,4 +1,4 @@
-import RobotList from './RobotList'
+import RobotList from './components/RobotList'
 
 export default function Home() {
   return (

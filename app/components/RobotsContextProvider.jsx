@@ -1,5 +1,6 @@
 'use client'
-// import { robots } from "./robots";
+import { Scope_One } from "next/font/google";
+import Scroll from "../components/Scroll";
 import { useState, createContext, useContext, useEffect } from "react"
 
 const RobotsContext = createContext();
@@ -13,7 +14,7 @@ export default function RobotsContextProvider({ children }) {
     const [isLoading, setLoading] = useState(false);
 
     function handleChange(e) {
-        setSearchInput(e.target.value.toLowerCase());
+        setSearchInput(e.target.value);
     }
 
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function RobotsContextProvider({ children }) {
 
     return (
         <RobotsContext.Provider
-            value={{ robots: searchInput ? robots.filter(robot => robot.name.toLowerCase().includes(searchInput)) : robots}}
+            value={{ robots: searchInput ? robots.filter(robot => robot.name.toLowerCase().includes(searchInput.toLowerCase())) : robots}}
         >
             <input 
             className="p-3 border rounded bg-blue-100 my-6"
@@ -47,7 +48,9 @@ export default function RobotsContextProvider({ children }) {
             placeholder="Search Robots"
             onChange={handleChange}
             />
-            {children}
+            <Scroll>
+                {children}
+            </Scroll>  
         </RobotsContext.Provider>
     )
 }
