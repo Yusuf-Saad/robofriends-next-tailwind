@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} text-center`}>
-        <h1 className='text-4xl mt-4 text-white'>RoboFriends</h1>
-        <RobotsContextProvider>{children}</RobotsContextProvider>
+          <h1 className='text-4xl mt-4 text-white'>RoboFriends</h1>
+          <RobotsContextProvider>{children}</RobotsContextProvider>
       </body>
     </html>
   )
